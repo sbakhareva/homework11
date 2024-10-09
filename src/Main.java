@@ -26,17 +26,16 @@ public class Main {
         }
     }
 
-    public static void findDeliveryTime(int deliveryDistance, int deliveryDays) {
-        if (deliveryDistance > 100) {
-            System.out.println("В этом радиусе доставки нет.");
+    public static int findDeliveryTime(int distance) {
+        if (distance <= 20) {
+            return 1;
+        } else if (distance > 20 && distance <= 60) {
+            return 2;
+        } else if (distance > 60 && distance <= 100) {
+            return 3;
+        } else {
+            return 0;
         }
-        if (deliveryDistance > 20) {
-            deliveryDays++;
-        }
-        if (deliveryDistance > 60) {
-            deliveryDays++;
-        }
-        System.out.println("Потребуется дней: " + deliveryDays);
     }
 
         public static void main (String[]args) {
@@ -51,8 +50,13 @@ public class Main {
             downloadCorrectVersion(clientOS, clientDeviceYear);
 
             // Task #3
-            int deliveryDistance = 53;
-            int deliveryDays = 1;
-            findDeliveryTime(deliveryDistance, deliveryDays);
+            int deliveryDistance = 99;
+            int deliveryDays = 0;
+            deliveryDays = findDeliveryTime(deliveryDistance);
+            if (deliveryDays > 0) {
+                System.out.println("Потребуется дней: " + deliveryDays);
+            } else {
+                System.out.println("В этом радиусе доставки нет.");
+            }
         }
     }
