@@ -51,8 +51,7 @@ public class Main {
 
             // Task #3
             int deliveryDistance = 99;
-            int deliveryDays = 0;
-            deliveryDays = findDeliveryTime(deliveryDistance);
+            int deliveryDays = findDeliveryTime(deliveryDistance);
             if (deliveryDays > 0) {
                 System.out.println("Потребуется дней: " + deliveryDays);
             } else {
