@@ -45,7 +45,7 @@ public class Main {
             int year = 2023;
             findLeapYear(year);
 
-            // Task #2
+            // Task №2
             int clientDeviceYear = LocalDate.now().getYear();
             int clientOS = 0;
             downloadCorrectVersion(clientOS, clientDeviceYear);
